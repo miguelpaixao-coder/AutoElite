@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoElite Motors | Concessionária Premium</title>
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">AUTOELITE</span> MOTORS
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active">Início</a>
+        <a href="#catalog" class="nav-link">Estoque</a>
+        <a href="#services" class="nav-link">Serviços</a>
+        <a href="#about" class="nav-link">Sobre</a>
+        <a href="#contact" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon" id="cart-btn" aria-label="Favoritos">
+          <i class="fa-solid fa-heart"></i>
+          <span class="badge" id="fav-count">0</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">Agendar Test Drive</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="hero-subtitle">Elegância, Potência e Exclusividade</span>
+      <h1 class="hero-title">Encontre o Veículo dos Seus Sonhos</h1>
+      <p class="hero-text">Uma seleção rigorosa de carros seminovos e zero quilômetro com garantia total, procedência checada e as melhores condições de financiamento do mercado.</p>
+      
+      <div class="hero-buttons">
+        <a href="#catalog" class="btn btn-primary btn-lg">Ver Estoque Completo <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-outline btn-lg">Falar com Consultor</a>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="quick-filter">
+        <div class="filter-group">
+          <label><i class="fa-solid fa-car"></i> Marca</label>
+          <select id="quick-brand">
+            <option value="all">Todas as Marcas</option>
+            <option value="Porsche">Porsche</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Audi">Audi</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Ferrari">Ferrari</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label><i class="fa-solid fa-layer-group"></i> Categoria</label>
+          <select id="quick-category">
+            <option value="all">Todas as Categorias</option>
+            <option value="SUV">SUVs & Crossovers</option>
+            <option value="Sedan">Sedans de Luxo</option>
+            <option value="Esportivo">Esportivos</option>
+            <option value="Elétrico">Elétricos & Híbridos</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label><i class="fa-solid fa-dollar-sign"></i> Valor Máximo</label>
+          <select id="quick-price">
+            <option value="all">Sem limite de preço</option>
+            <option value="500000">Até R$ 500.000</option>
+            <option value="1000000">Até R$ 1.000.000</option>
+            <option value="2000000">Até R$ 2.000.000</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="quick-search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i> Buscar
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Differentiators Bar -->
+  <section class="features-bar">
+    <div class="container features-grid">
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div class="feature-info">
+          <h4>Garantia Total de 1 Ano</h4>
+          <p>Veículos 100% periciados com laudo cautelar aprovado.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+        <div class="feature-info">
+          <h4>Melhor Avaliação do Usado</h4>
+          <p>Aceitamos seu veículo na troca com valorização garantida.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="feature-info">
+          <h4>Aprovação Imediata</h4>
+          <p>Financiamento descomplicado com taxas exclusivas.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div class="feature-info">
+          <h4>Entrega em Todo o Brasil</h4>
+          <p>Receba seu carro novo na porta da sua casa com segurança.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicle Catalog Section -->
+  <section class="section catalog" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Showroom Exclusivo</span>
+        <h2 class="section-title">Nosso Estoque de Veículos</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="catalog-controls">
+        <div class="category-tabs" id="category-tabs">
+          <button class="tab-btn active" data-category="all">Todos os Modelos</button>
+          <button class="tab-btn" data-category="SUV">SUVs</button>
+          <button class="tab-btn" data-category="Sedan">Sedans</button>
+          <button class="tab-btn" data-category="Esportivo">Esportivos</button>
+          <button class="tab-btn" data-category="Elétrico">Elétricos / Híbridos</button>
+        </div>
+        
+        <div class="sort-wrapper">
+          <label for="sort-select"><i class="fa-solid fa-sort"></i> Ordenar por:</label>
+          <select id="sort-select">
+            <option value="featured">Destaques Primeiro</option>
+            <option value="price-asc">Menor Preço</option>
+            <option value="price-desc">Maior Preço</option>
+            <option value="year-desc">Ano mais recente</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Vehicle Cards Grid -->
+      <div class="car-grid" id="car-grid"></div>
+    </div>
+  </section>
+
+  <!-- Interactive Finance Simulator -->
+  <section class="section simulator-section">
+    <div class="container">
+      <div class="simulator-card">
+        <div class="simulator-info">
+          <span class="badge-tag">Simulador Financeiro</span>
+          <h2>Simule o Financiamento do seu Veículo</h2>
+          <p>Calcule as parcelas estimadas em tempo real com nossas taxas preferenciais a partir de 0,99% a.m.</p>
+          <ul class="sim-benefits">
+            <li><i class="fa-solid fa-circle-check"></i> Sem necessidade de comprovação complexa de renda</li>
+            <li><i class="fa-solid fa-circle-check"></i> Entrada facilitada no cartão em até 18x</li>
+            <li><i class="fa-solid fa-circle-check"></i> Primeira parcela para até 60 dias</li>
+          </ul>
+        </div>
+
+        <div class="simulator-form">
+          <div class="form-group">
+            <label for="sim-price">Valor do Veículo (R$): <span id="sim-price-val">R$ 350.000</span></label>
+            <input type="range" id="sim-price" min="50000" max="3000000" step="20000" value="350000">
+          </div>
+
+          <div class="form-group">
+            <label for="sim-down">Entrada (R$): <span id="sim-down-val">R$ 100.000</span></label>
+            <input type="range" id="sim-down" min="0" max="2000000" step="20000" value="100000">
+          </div>
+
+          <div class="form-group">
+            <label>Prazo de Pagamento:</label>
+            <div class="month-options" id="month-options">
+              <button class="month-btn" data-months="24">24x</button>
+              <button class="month-btn active" data-months="36">36x</button>
+              <button class="month-btn" data-months="48">48x</button>
+              <button class="month-btn" data-months="60">60x</button>
+            </div>
+          </div>
+
+          <div class="sim-result-box">
+            <div class="result-item">
+              <span>Valor Financiado:</span>
+              <strong id="sim-financed-val">R$ 250.000</strong>
+            </div>
+            <div class="result-item main">
+              <span>Parcela Estimada:</span>
+              <strong id="sim-installment-val">R$ 8.420 <small>/mês</small></strong>
+            </div>
+            <p class="sim-disclaimer">*Taxa estimada de 1,19% a.m. Sujeito à análise de crédito do banco parceiro.</p>
+            <button class="btn btn-primary btn-block" id="sim-submit-btn">Propor Proposta com este Valor</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Atendimento 360°</span>
+        <h2 class="section-title">Serviços Especializados</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Consignação Premium</h3>
+          <p>Vendemos o seu veículo com máxima segurança, garantindo a melhor avaliação e exposição nos principais canais VIP.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Estética Automotive Detail</h3>
+          <p>Polimento técnico, vitrificação de pintura, higienização interna e blindagem de superfícies para o seu carro novo.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-cat"></i></div>
+          <h3>Seguros e Blindagem</h3>
+          <p>Parceria com as melhores seguradoras e empresas de blindagem certificada Nível III-A com garantia de fábrica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-images">
+        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=800&q=80" alt="Showroom AutoElite" class="img-main">
+        <div class="experience-badge">
+          <span class="number">15+</span>
+          <span class="text">Anos de Excelência no Mercado Premium</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <span class="section-subtitle">Sobre a AutoElite Motors</span>
+        <h2 class="section-title">Tradição em Realizar Sonhos sobre Rodas</h2>
+        <p>Fundada com o propósito de redefinir a experiência de aquisição de veículos de luxo e alta performance, a AutoElite Motors combina transparência, paixão por automóveis e um padrão de atendimento personalizado inigualável.</p>
+        
+        <div class="about-stats">
+          <div class="stat-item">
+            <h4>+3.500</h4>
+            <p>Carros Entregues</p>
+          </div>
+          <div class="stat-item">
+            <h4>99,8%</h4>
+            <p>Clientes Satisfeitos</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Laudo Cautelar Aprovado</p>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary">Conheça Nossa Loja</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Depoimentos</span>
+        <h2 class="section-title">O que dizem nossos clientes</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Atendimento impecável do início ao fim. Comprei minha Porsche Macan e o processo de entrega foi surpreendente, com direito a cerimônia VIP no showroom."</p>
+          <div class="client-info">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Cliente">
+            <div>
+              <h5>Carolina M. Mendes</h5>
+              <span>Empresária</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p>"Deixei minha BMW X6 em consignação e vendeu em menos de 10 dias pelo valor que combinamos. Transparência e agilidade sem igual no mercado!"</p>
+          <div class="client-info">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Cliente">
+            <div>
+              <h5>Roberto S. Fontes</h5>
+              <span>Investidor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="section-subtitle">Fale Conosco</span>
+        <h2 class="section-title">Visite Nosso Showroom</h2>
+        <p>Agende um café com um de nossos consultores executivos e venha testar sua próxima conquista.</p>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <strong>Endereço:</strong>
+              <p>Av. das Nações Unidas, 12.900 - Morumbi, São Paulo - SP</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <strong>Telefone / WhatsApp:</strong>
+              <p>(11) 98765-4321 / (11) 3456-7890</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <strong>E-mail:</strong>
+              <p>contato@autoelitemotors.com.br</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <strong>Horário de Funcionamento:</strong>
+              <p>Seg a Sex: 09h às 19h | Sábados: 09h às 16h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Envie uma Mensagem</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Nome Completo</label>
+            <input type="text" id="contact-name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-phone">Telefone / WhatsApp</label>
+              <input type="tel" id="contact-phone" placeholder="(11) 99999-9999" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">E-mail</label>
+              <input type="email" id="contact-email" placeholder="seu@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-interest">Interesse Principal</label>
+            <select id="contact-interest">
+              <option value="comprar">Quero Comprar um Veículo</option>
+              <option value="vender">Quero Vender / Consignar</option>
+              <option value="financiamento">Simulação de Financiamento</option>
+              <option value="outro">Outro Assunto</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Mensagem ou Modelo Desejado</label>
+            <textarea id="contact-message" rows="4" placeholder="Como podemos te ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar Solicitação</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#" class="logo footer-logo">
+          <span class="logo-accent">AUTOELITE</span> MOTORS
+        </a>
+        <p>A concessionária de alta gama referência em qualidade, atendimento exclusivo e melhores oportunidades em veículos premium.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#catalog">Estoque de Seminovos</a></li>
+          <li><a href="#services">Serviços</a></li>
+          <li><a href="#about">Sobre Nós</a></li>
+          <li><a href="#contact">Fale Conosco</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Marcas Populares</h4>
+        <ul>
+          <li><a href="#catalog">Porsche</a></li>
+          <li><a href="#catalog">BMW M Series</a></li>
+          <li><a href="#catalog">Mercedes-AMG</a></li>
+          <li><a href="#catalog">Audi RS</a></li>
+          <li><a href="#catalog">Land Rover Defender</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p>Receba em primeira mão nossas novas entradas e ofertas exclusivas.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Seu melhor e-mail" required>
+          <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 AutoElite Motors. Todos os direitos reservados. Fotos meramente ilustrativas.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Detalhes do Veículo -->
+  <div class="modal" id="car-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Botão Flutuante do WhatsApp -->
+  <a href="https://wa.me/5511987654321" class="whatsapp-float" target="_blank" aria-label="Atendimento via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script Embutido com Sedans Incluídos -->
+  <script>
+    const carsData = [
+      {
+        id: 1,
+        brand: "Porsche",
+        model: "911 Carrera S 3.0 Bi-Turbo",
+        category: "Esportivo",
+        price: 890000,
+        year: 2023,
+        km: "12.000",
+        fuel: "Gasolina",
+        transmission: "PDK 8v",
+        power: "450 cv",
+        tag: "Seminovo VIP",
+        image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80",
+        description: "Excelente estado de conservação, teto solar panorâmico, pacote Sport Chrono, escapamento esportivo original de fábrica e PPF frontal completo."
+      },
+      {
+        id: 2,
+        brand: "BMW",
+        model: "X6 M Competition 4.4 V8",
+        category: "SUV",
+        price: 740000,
+        year: 2022,
+        km: "18.500",
+        fuel: "Gasolina",
+        transmission: "Aut 8v",
+        power: "625 cv",
+        tag: "Destaque",
+        image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
+        description: "Versão M Competition topo de linha. Som Bowers & Wilkins, bancos com massagem e ventilação, laudo cautelar 100% aprovado sem retoches."
+      },
+      {
+        id: 3,
+        brand: "Mercedes-Benz",
+        model: "AMG GT 63 S Coupe 4-Door",
+        category: "Esportivo",
+        price: 980000,
+        year: 2023,
+        km: "8.000",
+        fuel: "Gasolina",
+        transmission: "AMG Speedshift 9v",
+        power: "639 cv",
+        tag: "Único Dono",
+        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+        description: "Cor cinza fosco original AMG, interior em couro Nappa com costuras amarelas, freios de cerâmica e faróis Multibeam LED."
+      },
+      {
+        id: 4,
+        brand: "Mercedes-Benz",
+        model: "S 500 4MATIC 3.0 EQ Boost",
+        category: "Sedan",
+        price: 820000,
+        year: 2023,
+        km: "10.500",
+        fuel: "Híbrido Leve",
+        transmission: "9G-Tronic 9v",
+        power: "435 cv",
+        tag: "Alta Classe",
+        image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80",
+        description: "O ápice do luxo automotivo. Interior com telas OLED MMI de 12,8 polegadas, suspensão a ar Airmatic, eixo traseiro esterçante e som Burmester 3D."
+      },
+      {
+        id: 5,
+        brand: "BMW",
+        model: "M5 Competition 4.4 V8 TwinPower",
+        category: "Sedan",
+        price: 790000,
+        year: 2022,
+        km: "14.000",
+        fuel: "Gasolina",
+        transmission: "M Steptronic 8v",
+        power: "625 cv",
+        tag: "Sedan de Alta Performance",
+        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=800&q=80",
+        description: "A combinação perfeita entre sedan executivo e supercarro. Tração M xDrive ajustável para 100% traseira, teto em fibra de carbono e escapamento M Sport."
+      },
+      {
+        id: 6,
+        brand: "Audi",
+        model: "RS e-tron GT Quattro",
+        category: "Elétrico",
+        price: 680000,
+        year: 2023,
+        km: "5.200",
+        fuel: "100% Elétrico",
+        transmission: "Aut 2v",
+        power: "646 cv",
+        tag: "Oportunidade",
+        image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80",
+        description: "Tecnologia de ponta em mobilidade elétrica. Aceleração de 0 a 100km/h em 3.3s, autonomia de até 472km e eixos traseiros esterçantes."
+      },
+      {
+        id: 7,
+        brand: "Volvo",
+        model: "XC90 T8 Recharge Ultimate",
+        category: "SUV",
+        price: 395000,
+        year: 2022,
+        km: "29.000",
+        fuel: "Híbrido Plug-in",
+        transmission: "Aut 8v",
+        power: "462 cv",
+        tag: "Blindado NIII-A",
+        image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=800&q=80",
+        description: "Espaço para 7 passageiros, blindagem nível III-A impecável sem delaminações, som Bowers & Wilkins e teto solar operacional."
+      },
+      {
+        id: 8,
+        brand: "Land Rover",
+        model: "Defender 110 HSE 3.0 Mild-Hybrid",
+        category: "SUV",
+        price: 520000,
+        year: 2023,
+        km: "15.000",
+        fuel: "Diesel Híbrido",
+        transmission: "Aut 8v",
+        power: "300 cv",
+        tag: "Garantia de Fábrica",
+        image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=800&q=80",
+        description: "Ícone do off-road de luxo. Suspensão a ar pneumática, geladeira no console central, painel digital de 12.3 polegadas e câmeras 360 3D."
+      },
+      {
+        id: 9,
+        brand: "Porsche",
+        model: "Taycan Turbo S Electric",
+        category: "Elétrico",
+        price: 1150000,
+        year: 2024,
+        km: "3.500",
+        fuel: "100% Elétrico",
+        transmission: "Aut 2v",
+        power: "761 cv",
+        tag: "Zero KM / Impecável",
+        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+        description: "O esportivo elétrico mais rápido da categoria. Acelera de 0 a 100 km/h em 2,8s com Launch Control, interior em couro de alto luxo e telas duplas MMI."
+      },
+      {
+        id: 10,
+        brand: "BMW",
+        model: "M4 Competition Coupe 3.0",
+        category: "Esportivo",
+        price: 690000,
+        year: 2023,
+        km: "9.800",
+        fuel: "Gasolina",
+        transmission: "M Steptronic 8v",
+        power: "510 cv",
+        tag: "Exclusivo",
+        image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=800&q=80",
+        description: "Bancos concha em fibra de carbono M Carbon, tração traseira, cor de lançamento Amarelo Sao Paulo e escapamento M Performance."
+      },
+      {
+        id: 11,
+        brand: "Mercedes-Benz",
+        model: "G 63 AMG V8 Biturbo",
+        category: "SUV",
+        price: 1650000,
+        year: 2023,
+        km: "11.000",
+        fuel: "Gasolina",
+        transmission: "AMG Speedshift 9v",
+        power: "585 cv",
+        tag: "Colecionador",
+        image: "https://images.unsplash.com/photo-1520050206274-a1ae44613e6d?auto=format&fit=crop&w=800&q=80",
+        description: "O SUV mais lendário e cobiçado do mundo. Pacote Night, rodas aro 22 AMG pretas e interior exclusivo em couro vermelho com carbono."
+      },
+      {
+        id: 12,
+        brand: "Lamborghini",
+        model: "Urus V8 4.0 Twin-Turbo",
+        category: "SUV",
+        price: 2400000,
+        year: 2023,
+        km: "6.000",
+        fuel: "Gasolina",
+        transmission: "Aut 8v",
+        power: "650 cv",
+        tag: "Super SUV",
+        image: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80",
+        description: "Desempenho de superesportivo com espaço de SUV de luxo. Aceleração de 0 a 100 km/h em 3,6s, rodas aro 23 e sistema de som Bang & Olufsen 3D."
+      },
+      {
+        id: 13,
+        brand: "Ferrari",
+        model: "F8 Spider 3.9 V8 Turbo",
+        category: "Esportivo",
+        price: 3200000,
+        year: 2022,
+        km: "4.100",
+        fuel: "Gasolina",
+        transmission: "F1 Dual-Clutch 7v",
+        power: "720 cv",
+        tag: "Oportunidade VIP",
+        image: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80",
+        description: "Conversível com capota rígida retrátil. Icônica cor Rosso Corsa, interior com detalhes em Alcantara e cavalinho bordado nos apoios de cabeça."
+      }
+    ];
+
+    let favorites = [];
+
+    function formatCurrency(val) {
+      return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(val);
+    }
+
+    function renderCars(cars) {
+      const container = document.getElementById('car-grid');
+      if (!container) return;
+
+      if (cars.length === 0) {
+        container.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+          <h3>Nenhum veículo encontrado com os filtros selecionados.</h3>
+        </div>`;
+        return;
+      }
+
+      container.innerHTML = cars.map(car => {
+        const isFav = favorites.includes(car.id);
+        return `
+          <div class="car-card">
+            <div class="car-image-wrapper">
+              <img src="${car.image}" alt="${car.brand} ${car.model}">
+              <span class="car-tag">${car.tag}</span>
+              <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite(${car.id})">
+                <i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i>
+              </button>
+            </div>
+            <div class="car-content">
+              <div class="car-header">
+                <span class="car-brand">${car.brand}</span>
+                <h3 class="car-title">${car.model}</h3>
+              </div>
+              <div class="car-specs">
+                <div class="spec-item"><i class="fa-solid fa-calendar"></i> ${car.year}</div>
+                <div class="spec-item"><i class="fa-solid fa-gauge"></i> ${car.km} km</div>
+                <div class="spec-item"><i class="fa-solid fa-gas-pump"></i> ${car.fuel}</div>
+              </div>
+              <div class="car-footer">
+                <div class="car-price">
+                  <span>Valor à Vista</span>
+                  <strong>${formatCurrency(car.price)}</strong>
+                </div>
+                <button class="btn btn-outline btn-sm" onclick="openCarModal(${car.id})">Detalhes</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleFavorite(id) {
+      if (favorites.includes(id)) {
+        favorites = favorites.filter(favId => favId !== id);
+      } else {
+        favorites.push(id);
+      }
+      document.getElementById('fav-count').textContent = favorites.length;
+      filterAndSortCars(document.querySelector('.tab-btn.active')?.dataset.category || 'all');
+    }
+
+    function filterAndSortCars(category = 'all') {
+      let filtered = [...carsData];
+
+      if (category !== 'all') {
+        filtered = filtered.filter(c => c.category.toLowerCase() === category.toLowerCase());
+      }
+
+      const brandVal = document.getElementById('quick-brand').value;
+      const catVal = document.getElementById('quick-category').value;
+      const priceVal = document.getElementById('quick-price').value;
+
+      if (brandVal !== 'all') filtered = filtered.filter(c => c.brand.toLowerCase() === brandVal.toLowerCase());
+      if (catVal !== 'all') filtered = filtered.filter(c => c.category.toLowerCase() === catVal.toLowerCase());
+      if (priceVal !== 'all') filtered = filtered.filter(c => c.price <= parseInt(priceVal));
+
+      const sortVal = document.getElementById('sort-select').value;
+      if (sortVal === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      else if (sortVal === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      else if (sortVal === 'year-desc') filtered.sort((a, b) => b.year - a.year);
+
+      renderCars(filtered);
+    }
+
+    function openCarModal(id) {
+      const car = carsData.find(c => c.id === id);
+      if (!car) return;
+
+      document.getElementById('modal-body').innerHTML = `
+        <div class="modal-grid">
+          <div>
+            <img src="${car.image}" alt="${car.model}" class="modal-img">
+          </div>
+          <div>
+            <span class="car-brand">${car.brand}</span>
+            <h2 class="modal-title">${car.model}</h2>
+            <div class="modal-price">${formatCurrency(car.price)}</div>
+            <p style="color: var(--text-muted); font-size:0.9rem;">${car.description}</p>
+            
+            <ul class="modal-specs-list">
+              <li><span>Ano Fabricação:</span> <strong>${car.year}</strong></li>
+              <li><span>Quilometragem:</span> <strong>${car.km} km</strong></li>
+              <li><span>Combustível:</span> <strong>${car.fuel}</strong></li>
+              <li><span>Transmissão:</span> <strong>${car.transmission}</strong></li>
+              <li><span>Potência:</span> <strong>${car.power}</strong></li>
+              <li><span>Selo de Qualidade:</span> <strong>${car.tag}</strong></li>
+            </ul>
+
+            <a href="https://wa.me/5511987654321?text=Olá,%20tenho%20interesse%20no%20veículo%20${encodeURIComponent(car.brand + ' ' + car.model)}" 
+               target="_blank" class="btn btn-primary btn-block" style="margin-top: 20px;">
+              <i class="fa-brands fa-whatsapp"></i> Negociar via WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+      document.getElementById('car-modal').classList.add('active');
+    }
+
+    function updateSimulator() {
+      const price = parseInt(document.getElementById('sim-price').value);
+      let down = parseInt(document.getElementById('sim-down').value);
+      
+      if (down >= price) {
+        down = price * 0.8;
+        document.getElementById('sim-down').value = down;
+      }
+
+      const financed = price - down;
+      const activeMonthBtn = document.querySelector('.month-btn.active');
+      const months = parseInt(activeMonthBtn ? activeMonthBtn.dataset.months : 36);
+
+      const rate = 0.0119;
+      const installment = (financed * rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
+
+      document.getElementById('sim-price-val').textContent = formatCurrency(price);
+      document.getElementById('sim-down-val').textContent = formatCurrency(down);
+      document.getElementById('sim-financed-val').textContent = formatCurrency(financed);
+      document.getElementById('sim-installment-val').innerHTML = `${formatCurrency(installment)} <small>/mês</small>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCars(carsData);
+
+      window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      });
+
+      document.getElementById('mobile-toggle').addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.toggle('active');
+      });
+
+      const tabs = document.querySelectorAll('.tab-btn');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          tabs.forEach(t => t.classList.remove('active'));
+          e.target.classList.add('active');
+          filterAndSortCars(e.target.dataset.category);
+        });
+      });
+
+      document.getElementById('sort-select').addEventListener('change', () => filterAndSortCars());
+      document.getElementById('quick-search-btn').addEventListener('click', () => filterAndSortCars());
+
+      document.getElementById('sim-price').addEventListener('input', updateSimulator);
+      document.getElementById('sim-down').addEventListener('input', updateSimulator);
+      
+      const monthBtns = document.querySelectorAll('.month-btn');
+      monthBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          monthBtns.forEach(b => b.classList.remove('active'));
+          e.target.classList.add('active');
+          updateSimulator();
+        });
+      });
+
+      updateSimulator();
+
+      document.getElementById('modal-close').addEventListener('click', () => {
+        document.getElementById('car-modal').classList.remove('active');
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Obrigado! Sua mensagem foi enviada.');
+        e.target.reset();
+      });
+
+      document.getElementById('newsletter-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('E-mail cadastrado com sucesso!');
+        e.target.reset();
+      });
+
+      document.getElementById('sim-submit-btn').addEventListener('click', () => {
+        alert('Proposta de financiamento enviada!');
+      });
+    });
+  </script>
+</body>
+</html>
